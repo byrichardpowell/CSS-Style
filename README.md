@@ -32,7 +32,7 @@ Long complex selector chains spawn specificity wars and are slower for the brows
 
 A preprocessors features should never produce CSS that is longer than it would have been without the preprocessor.  That just sucks.
 
-Source: [SMACSS on preprocessors](https://smacss.com/book/preprocessors)
+Source: [SMACSS on preprocessors (members only)](https://smacss.com/book/preprocessors)
 
 ### Minimise HTTP requests
 
