@@ -160,6 +160,10 @@ Source: [SMACSS on state](http://smacss.com/book/type-state)
 
 Source: [SMACSS on state](http://smacss.com/book/type-state)
 
+### Icons do not belong in modules
+
+By styling icons independently of the module where it was first used you are making an icon that can be used in future modules without the need for duplication of code.
+
 ## Icons
 
 ### Split icon styles into ico, ico-size & ico-img classes
@@ -172,11 +176,11 @@ Source: [SMACSS on Icons](http://smacss.com/book/icon-module)
 
 Sprite images are an important way to reduce HTTP requests, but they can are cumbersome to manage when that projects interface is in its infancy.  Do not over optimise too early, instead wait till the project is ready to deploy and aim to make time for sprite sheet optimisation then.
 
-Source: [SMACSS on Icons](http://smacss.com/book/icon-module) 
-
 ### Sprited Icons should be added to empty elements
 
 If you add a sprite image to the background of an element that has text what happens when that element receives more text an expands?  It will happen and you'll feel silly, so avoid the pain and add icons to empty elements even though that means more markup.
+
+Source: [SMACSS on Icons](http://smacss.com/book/icon-module) 
 
 
 
