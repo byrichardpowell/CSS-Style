@@ -90,7 +90,7 @@ Splitting CSS into multiple files in a constant way makes it easier to find the 
 
 It sucks to have to search through 1000+ lines of code, so avoid it.  This rule may mean having to split the CSS module file into multiple files. When doing this make sure to only serve one file to the user.
 
-### Order properties: box, border, background, text & other (smacss)
+### Order properties: box, border, background, text & other 
 
 The only _correct_ way of ordering properties is a consistent way.  So pick a method and make sure the entire team is constant in using that method
 
@@ -99,23 +99,64 @@ Source: [SMACSS on formatting](https://smacss.com/book/formatting)
 ## Layout
 
 ### Separate Layout and Module rules
-### Layout classes should be prefixed with l (smacss)
+
+A Module defines the appearance and positing of its elements, nothing else.  If a module were to define a specific width then it would not be flexible enough to be included in multiple locations of different dimensions.
+
+### Layout classes should be prefixed with l 
+
+This makes the separation between module and layout clear.
+
+Source: [SMACSS on layout](http://smacss.com/book/type-layout)
 
 ## Modules
 
-### A Module should flexible width
+### A Module should have flexible dimensions
+
+If a module needs to be contained do so using another class or a wrapper.  Modules need to be flexible, forcing their dimensions id not being flexible.
+
 ### Comment a module thoroughly
-### Ensure modules are self contained and reusable (smacss)
-### Keep module names short 
-### Module Specific Classes should be module name prefixed (smacss)
+
+At the start of a module a comment should provide a picture of what content it contains, how that content looks and anything that is unusual about it.  Ideally it should also provide a link to an example of the module in a HTML file.
+
+### Ensure modules are self contained and reusable 
+
+Friends don't let friends write modules that may bleed into other modules or can only be used in a limited number of places.    Time spent upfront avoiding these two problems will save that time 10 fold later in the project. 
+
+### Module names should be self explanatory but short
+
+It should be possible to look at a modules class and instantly have an idea what that module represents.  Do not provide a detailed description in the class name, just an overview.  A detailed description belongs in a comment at the top of the module CSS.
+
+### Module Specific Classes should be module name prefixed 
+
+Adding the modules name to the start of all its classes ensures that if a module sits inside another module, the parents styles will not bleed into the childs.  It also makes scanning the HTML easier as it is immediately clear which classes belong to which modules.
+
 ### Use a nested selector to group module rules
-### Use immediate child selectors to contain modules (smacss)
+
+Preprocessors provide an opportunity to make it crystal clear where a modules rules start and end.  Use that opportunity but be sure not to nest nested selectors inside other nested selectors.  This would produce large selector chains, which are a bad idea.
+
 ### Split Modules into default, state, & subclass groups
-### Subclass a module to create different module versions (smacss)
-### Module Subclasses should follow the pattern: module--subclass
-### Module Subclasses should be prefixed with the module class
-### State classes should be prefixed with is (smacss)
-### Only State rules may use !important (smacss)
+
+Consistently architecting modules in this way makes it easy to scan the module and get a good overview of it.  Being inconsistent is likely to lead to mistakes and oversights when the module is edited at a later date.
+
+### Subclass a module to create different versions of it
+
+A module subclass will make changes to a module that might be major in appearance but should be minor in terms of the amount of styles it is changing.  A module subclass should not be used if the module subclass would need to overuse many styles and make it unrecognisable from its module.  If a module is subclassed its wrapper will need the class for the module and for the subclass of that module.
+
+Source: [SMACSS on modules](http://smacss.com/book/type-module)
+
+### Module Subclass class names should be: module--subclass
+
+The double dash makes it clear that this class represents a subclass and which module the subclass is affecting.  The wrapper for this module will need the module class and the subclass module. 
+
+### State classes should be prefixed with is
+
+A state class ( e.g: .is-active, .is-empty ) is similar to a pseudo class in that it updates the appearance of an element.  Where it differs is that a state class will be added by javascript or the app when the page loads.  Adding is- to the start of the class clearly indicates that this module has been affected by a state class.
+
+Source: [SMACSS on state](http://smacss.com/book/type-state)
+
+### Only State classes may use !important (smacss)
+
+!important should be avoided as much as possible, as such state classes are the only acceptable use of important.  Even so !important should not be the go to solution as its akin to using a grenade when careful diplomacy would suffice.
 
 ## Icons
 
