@@ -1,8 +1,6 @@
 # Thap CSS Style
 
-Thap CSS Style is a small, concise style guide for writing CSS that scales.  It contains the bare essentials: The rules, the reasoning and the sources.
-
-The style guide takes inspiration a few sources, which it tries to credit.  These sources will provide more reasoning on the rule than this document contains.
+Thap CSS Style is a small, concise style guide for writing CSS that scales.  It contains the bare essentials: The rules, the reasoning and the sources. The style guide takes inspiration a few sources, which it tries to credit.  These sources will provide more reasoning on the rule than this document contains.
 
 ## General
 
@@ -48,6 +46,8 @@ Source: [Google Page Speed on Minifying CSS](https://developers.google.com/speed
 
 CSS Architecture is more difficult to do well than it is difficult to understand CSS Properties.  Putting a declarations rules on one line allows easy scanning of class names and can put more code on one screen.  These factors combined make it easier to understand the overall architecture of a CSS file.
 
+Note that [SMACSS on formatting](https://smacss.com/book/formatting) disagrees with this rule but it does not disagree with the reasoning.  Most important though is that the teams approach is consistent. 
+
 ### Use dashes to separate words
 
 CSS properties do not use underscores or camel case, they use dashes.  Do the same with classes 
@@ -55,19 +55,46 @@ CSS properties do not use underscores or camel case, they use dashes.  Do the sa
 ## Cross Browser
 
 ### Use browser prefixes correctly & Painlessly
+
+When using prefixed properties ensure that microsoft, opera, webkit and mozilla prefixes are supported and that the non prefixed version is too.  Make this less painful by abstracting it away into a preprocessor mixin.
+
 ### Use Conditional classes for Internet Explorer
-### Group IE Conditional classes with the code they alter
+
+Aim to avoid seperate styles for internet explorer, but where unavoidable do not use conditional stylesheets or CSS hacks to target specific versions of IE. Instead use conditional classes as explained by Paul Irish.
+
+Source: [Conditional stylesheets vs CSS hacks…](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/)
+
+### Group IE Conditional styling with the code they alter
+
+Aim to avoid separate styles for internet explorer, but where unavoidable place the "fixes" next to the style it effects.  Not doing so makes it easy to miss when updating to changing the original styles
+
+### Normalise Don't Reset
+
+A global reset is a convenient way of ensuring consistent styling cross browser but it is often overkill and it makes CSS harder to debug in developer tools.
+
+Source: [Normalise.css](http://necolas.github.com/normalize.css/)
+
+### Don't be over-zealous when normalising
+
+When normalising it is important to not add styles to elements that then need to be overridden in future modules.  Tables and form elements are great examples of this.
+
+Source: [SMACSS on drop the base](http://smacss.com/book/drop-the-base)
 
 ## Architecture
 
 ### Split CSS into Normalise, Layout, Module & Icon files
+
+Splitting CSS into multiple files in a constant way makes it easier to find the CSS you are looking for. 
+
 ### Keep CSS files under 500 lines of code
+
+It sucks to have to search through 1000+ lines of code, so avoid it.  This rule may mean having to split the CSS module file into multiple files. When doing this make sure to only serve one file to the user.
+
 ### Order properties: box, border, background, text & other (smacss)
 
-## Normalisation
+The only _correct_ way of ordering properties is a consistent way.  So pick a method and make sure the entire team is constant in using that method
 
-### Normalise Don't Reset
-### Don't be over-zealous when normalising
+Source: [SMACSS on formatting](https://smacss.com/book/formatting)
 
 ## Layout
 
