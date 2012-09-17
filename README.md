@@ -1,6 +1,8 @@
-# Thap CSS Style
+# A CSS Style Guide
 
-Thap CSS Style is a small, concise style guide for writing CSS that scales.  It contains the bare essentials: The rules, the reasoning and the sources. The style guide takes inspiration a few sources, which it tries to credit.  These sources will provide more reasoning on the rule than this document contains.
+This is a small, concise style guide for writing CSS that scales.  It contains the bare essentials: The rules, the reasoning and the sources. The style guide takes inspiration from a few sources, which it tries to credit.  These sources will provide more reasoning on the rule than this document contains.
+
+I welcome contributions
 
 ## General
 
