@@ -154,15 +154,29 @@ A state class ( e.g: .is-active, .is-empty ) is similar to a pseudo class in tha
 
 Source: [SMACSS on state](http://smacss.com/book/type-state)
 
-### Only State classes may use !important (smacss)
+### Only State classes may use !important 
 
 !important should be avoided as much as possible, as such state classes are the only acceptable use of important.  Even so !important should not be the go to solution as its akin to using a grenade when careful diplomacy would suffice.
 
+Source: [SMACSS on state](http://smacss.com/book/type-state)
+
 ## Icons
 
-### Split icon styles into ico, ico-size & ico-img classes (smacss)
+### Split icon styles into ico, ico-size & ico-img classes
+
+Specifying that something is an icon, its size and its image separately allows for maximum flexibility and minimal code repetition
+
+Source: [SMACSS on Icons](http://smacss.com/book/icon-module) 
+
 ### Optimise icon images into sprites late in the project 
-### Sprited Icons should be added to empty elements (smacss)
+
+Sprite images are an important way to reduce HTTP requests, but they can are cumbersome to manage when that projects interface is in its infancy.  Do not over optimise too early, instead wait till the project is ready to deploy and aim to make time for sprite sheet optimisation then.
+
+Source: [SMACSS on Icons](http://smacss.com/book/icon-module) 
+
+### Sprited Icons should be added to empty elements
+
+If you add a sprite image to the background of an element that has text what happens when that element receives more text an expands?  It will happen and you'll feel silly, so avoid the pain and add icons to empty elements even though that means more markup.
 
 
 
