@@ -12,6 +12,12 @@ Selectors that contain elements tightly coupled the CSS to specific markup. It i
 
 Source: [SMACSS on modules](http://smacss.com/book/type-module)
 
+### Do not use location based selectors
+
+A location based selector is a selector that changes a modules appearance based on its location (content area, side bar, header etc).  Where a module has different appearances it is better to use a module subclass.  If the appearance and/or content is very different it would be better to use a different module
+
+Source: [OOCSS, slide 20](http://www.slideshare.net/stubbornella/object-oriented-css)
+
 ### Do not use ID's in CSS Selectors
 
 It is never safe to assume there will only ever be one of something on a page so do not use ID's for CSS.  Id's are much better used as javascript hooks so use them for this instead.
