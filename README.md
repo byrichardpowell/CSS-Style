@@ -126,7 +126,7 @@ Source: [SMACSS on layout](http://smacss.com/book/type-layout)
 
 ### A Module should have flexible dimensions
 
-If a module needs to be contained do so using another class or a wrapper.  Modules need to be flexible, forcing their dimensions id not being flexible.
+If a module needs to be contained do so using another class or a wrapper.  Modules need to be flexible, forcing their dimensions is not being flexible.
 
 ### Comment a module thoroughly
 
