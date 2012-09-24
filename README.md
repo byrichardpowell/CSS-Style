@@ -178,6 +178,12 @@ Source: [SMACSS on state](http://smacss.com/book/type-state)
 
 By styling icons independently of the module where it was first used you are making an icon that can be used in future modules without the need for duplication of code.
 
+### Remove overly similar modules
+
+If two modules are very similar with only barely noticeable changes to stuff like the shadow, padding and colours combine them into one.  The user will never know the difference and chances are this is a mistake introduced before the development stage.
+
+Source: [OOCSS, slide 39](http://www.slideshare.net/stubbornella/object-oriented-css)
+
 ## Icons
 
 ### Split icon styles into ico, ico-size & ico-img classes
