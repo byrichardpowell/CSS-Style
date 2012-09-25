@@ -198,7 +198,9 @@ Sprite images are an important way to reduce HTTP requests, but they can are cum
 
 ### Sprited Icons should be added to empty elements
 
-If you add a sprite image to the background of an element that has text what happens when that element receives more text an expands?  It will happen and you'll feel silly, so avoid the pain and add icons to empty elements even though that means more markup.
+If you add a sprite image to the background of an element that has text what happens when that element receives more text and expands?  It will happen and you'll feel silly, so avoid the pain and add icons to empty elements even though that means more markup.
+
+Adding icons to elements that have their text hidden out of bounds is also a good approach.
 
 Source: [SMACSS on Icons](http://smacss.com/book/icon-module) 
 
