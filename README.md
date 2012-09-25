@@ -42,7 +42,7 @@ Long complex selector chains spawn specificity wars and are slower for the brows
 
 ### Don't use a Preprocessor to produce bloated CSS
 
-A preprocessors features should never produce CSS that is longer than it would have been without the preprocessor.  That just sucks.
+Utilise a preprocessors features such as mixins, variables, nested rules and functions to make code easier to maintain but always double check compiled stylesheets to avoid code bloat.  Preprocessors, when used inefficiently, can cause code bloat.
 
 Source: [SMACSS on preprocessors (members only)](https://smacss.com/book/preprocessors)
 
