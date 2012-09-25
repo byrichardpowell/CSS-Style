@@ -50,7 +50,7 @@ Source: [SMACSS on preprocessors (members only)](https://smacss.com/book/preproc
 
 HTTP Requests are expensive and slow the rendering of a page, so minimise them. Ideally a HTML page should contain just one CSS file with extra CSS being loaded as the page changes.
 
-### Always Minimize CSS
+### Always Minimise CSS
 
 Minifying code can save up to 60% on a files size.  Use a tool like [CodeKit](http://incident57.com/codekit/) to manage this and its easy-peasy.
 
@@ -70,11 +70,11 @@ CSS properties do not use underscores or camel case, they use dashes.  Do the sa
 
 ### Use browser prefixes correctly & Painlessly
 
-When using prefixed properties ensure that microsoft, opera, webkit and mozilla prefixes are supported and that the non prefixed version is too.  Make this less painful by abstracting it away into a preprocessor mixin.
+When using prefixed properties ensure that Microsoft, Opera, Webkit and Mozilla prefixes are supported and that the non prefixed version is too.  Make this less painful by abstracting it away into a preprocessor mixin.
 
 ### Use Conditional classes for Internet Explorer
 
-Aim to avoid seperate styles for internet explorer, but where unavoidable do not use conditional stylesheets or CSS hacks to target specific versions of IE. Instead use conditional classes as explained by Paul Irish.
+Aim to avoid separate styles for internet explorer, but where unavoidable do not use conditional stylesheets or CSS hacks to target specific versions of IE. Instead use conditional classes as explained by Paul Irish.
 
 Source: [Conditional stylesheets vs CSS hacks…](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/)
 
@@ -142,7 +142,7 @@ It should be possible to look at a modules class and instantly have an idea what
 
 ### Module Specific Classes should be module name prefixed 
 
-Adding the modules name to the start of all its classes ensures that if a module sits inside another module, the parents styles will not bleed into the childs.  It also makes scanning the HTML easier as it is immediately clear which classes belong to which modules.
+Adding the modules name to the start of all its classes ensures that if a module sits inside another module, the parent's styles will not bleed into the child's styles.  It also makes scanning the HTML easier as it is immediately clear which classes belong to which modules.
 
 ### Use a nested selector to group module rules
 
