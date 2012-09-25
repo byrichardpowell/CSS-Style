@@ -194,7 +194,7 @@ Source: [SMACSS on Icons](http://smacss.com/book/icon-module)
 
 ### Optimise icon images into sprites late in the project 
 
-Sprite images are an important way to reduce HTTP requests, but they can are cumbersome to manage when that projects interface is in its infancy.  Do not over optimise too early, instead wait till the project is ready to deploy and aim to make time for sprite sheet optimisation then.
+Sprite images are an important way to reduce HTTP requests but they can be cumbersome to manage when an interface is in its infancy.  Do not over optimise too early. Wait until the project is ready to deploy and make time for sprite sheet optimisation then.
 
 ### Sprited Icons should be added to empty elements
 
