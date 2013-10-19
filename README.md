@@ -4,10 +4,6 @@ This is a small, concise style guide for writing CSS that scales.  It contains t
 
 I welcome contributions
 
-# About The Author
-
-I am a web designer who gives jQuery workshops.  My skills are in UI Design, HTML, CSS, jQuery, Datavis and User Experience. I hack around with Ruby on Rails, NodeJS, blog at [byrichardpowell.co.uk](http://www.byrichardpowell.co.uk) and work for [Thap](http://www.thap.co.uk/).  I'd love it if we could [chat on twitter](http://www.twitter.com/byrichardpowell).
-
 # Rules
 
 ## General
